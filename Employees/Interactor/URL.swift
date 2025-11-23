@@ -14,8 +14,8 @@ let api = URL(string: "https://acacademy-employees-api.herokuapp.com/api")!
 #endif
 
 extension URL {
-    static let getEmpleados = api.appending(path: "getEmpleados")
-    static func getEmpleado(id: Int) -> URL {
+    static let getEmployees = api.appending(path: "getEmpleados")
+    static func getEmployee(id: Int) -> URL {
         api.appending(path: "getEmpleado").appending(path: "\(id)")
     }
 }
