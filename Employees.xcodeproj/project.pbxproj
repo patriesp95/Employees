@@ -6,17 +6,22 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B31F32BF2ED35E4D0001C780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B31F32BB2ED35E4D0001C780 /* Assets.xcassets */; };
+		B31F32C02ED35E4D0001C780 /* EmployeeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F32B92ED35E4D0001C780 /* EmployeeDTO.swift */; };
+		B31F32C12ED35E4D0001C780 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F32BC2ED35E4D0001C780 /* ContentView.swift */; };
+		B31F32C22ED35E4D0001C780 /* EmployeesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F32BD2ED35E4D0001C780 /* EmployeesApp.swift */; };
+		B31F32C52ED35F040001C780 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F32C42ED35F020001C780 /* Employee.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		B31F32B92ED35E4D0001C780 /* EmployeeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDTO.swift; sourceTree = "<group>"; };
+		B31F32BB2ED35E4D0001C780 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B31F32BC2ED35E4D0001C780 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B31F32BD2ED35E4D0001C780 /* EmployeesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesApp.swift; sourceTree = "<group>"; };
+		B31F32C42ED35F020001C780 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		B3E14FFE2ED2637F00894EBD /* Employees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Employees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		B3E150002ED2637F00894EBD /* Employees */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Employees;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B3E14FFB2ED2637F00894EBD /* Frameworks */ = {
@@ -29,10 +34,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B31F32BA2ED35E4D0001C780 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B31F32C42ED35F020001C780 /* Employee.swift */,
+				B31F32B92ED35E4D0001C780 /* EmployeeDTO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B31F32BE2ED35E4D0001C780 /* Employees */ = {
+			isa = PBXGroup;
+			children = (
+				B31F32BC2ED35E4D0001C780 /* ContentView.swift */,
+				B31F32BB2ED35E4D0001C780 /* Assets.xcassets */,
+				B31F32BA2ED35E4D0001C780 /* Model */,
+				B31F32C32ED35E5E0001C780 /* System */,
+			);
+			path = Employees;
+			sourceTree = "<group>";
+		};
+		B31F32C32ED35E5E0001C780 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				B31F32BD2ED35E4D0001C780 /* EmployeesApp.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
 		B3E14FF52ED2637F00894EBD = {
 			isa = PBXGroup;
 			children = (
-				B3E150002ED2637F00894EBD /* Employees */,
+				B31F32BE2ED35E4D0001C780 /* Employees */,
 				B3E14FFF2ED2637F00894EBD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,9 +92,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				B3E150002ED2637F00894EBD /* Employees */,
 			);
 			name = Employees;
 			packageProductDependencies = (
@@ -109,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B31F32BF2ED35E4D0001C780 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B31F32C02ED35E4D0001C780 /* EmployeeDTO.swift in Sources */,
+				B31F32C12ED35E4D0001C780 /* ContentView.swift in Sources */,
+				B31F32C22ED35E4D0001C780 /* EmployeesApp.swift in Sources */,
+				B31F32C52ED35F040001C780 /* Employee.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +293,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -266,11 +302,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pmespert.Employees;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_APPROACHABLE_CONCURRENCY = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -289,6 +326,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,11 +335,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pmespert.Employees;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_APPROACHABLE_CONCURRENCY = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
