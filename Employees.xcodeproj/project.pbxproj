@@ -79,11 +79,11 @@
 		B31F32C72ED36A5B0001C780 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				B31F32C82ED36A890001C780 /* URL.swift */,
 				B31F32D32ED380060001C780 /* URLRequest.swift */,
 				B31F32D12ED37FC20001C780 /* URLSession.swift */,
 				B31F32CF2ED37D410001C780 /* NetworkInteractor.swift */,
 				B31F32CA2ED36D0B0001C780 /* NetworkError.swift */,
-				B31F32C82ED36A890001C780 /* URL.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
