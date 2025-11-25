@@ -18,6 +18,7 @@
 		B31F32D02ED37D4A0001C780 /* NetworkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F32CF2ED37D410001C780 /* NetworkInteractor.swift */; };
 		B31F32D22ED37FCA0001C780 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F32D12ED37FC20001C780 /* URLSession.swift */; };
 		B31F32D42ED3800A0001C780 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F32D32ED380060001C780 /* URLRequest.swift */; };
+		B31F32D72ED4B8330001C780 /* EmployeesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F32D62ED4B82F0001C780 /* EmployeesVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B31F32CF2ED37D410001C780 /* NetworkInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInteractor.swift; sourceTree = "<group>"; };
 		B31F32D12ED37FC20001C780 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		B31F32D32ED380060001C780 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
+		B31F32D62ED4B82F0001C780 /* EmployeesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesVM.swift; sourceTree = "<group>"; };
 		B3E14FFE2ED2637F00894EBD /* Employees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Employees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 			children = (
 				B31F32BC2ED35E4D0001C780 /* ContentView.swift */,
 				B31F32BB2ED35E4D0001C780 /* Assets.xcassets */,
+				B31F32D52ED4B6620001C780 /* ViewModel */,
 				B31F32CC2ED3799B0001C780 /* Repository */,
 				B31F32C72ED36A5B0001C780 /* Interactor */,
 				B31F32BA2ED35E4D0001C780 /* Model */,
@@ -94,6 +97,14 @@
 				B31F32CD2ED379AA0001C780 /* NetworkRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		B31F32D52ED4B6620001C780 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B31F32D62ED4B82F0001C780 /* EmployeesVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B3E14FF52ED2637F00894EBD = {
@@ -191,6 +202,7 @@
 				B31F32CB2ED36D140001C780 /* NetworkError.swift in Sources */,
 				B31F32D22ED37FCA0001C780 /* URLSession.swift in Sources */,
 				B31F32C22ED35E4D0001C780 /* EmployeesApp.swift in Sources */,
+				B31F32D72ED4B8330001C780 /* EmployeesVM.swift in Sources */,
 				B31F32C52ED35F040001C780 /* Employee.swift in Sources */,
 				B31F32D02ED37D4A0001C780 /* NetworkInteractor.swift in Sources */,
 				B31F32D42ED3800A0001C780 /* URLRequest.swift in Sources */,
@@ -359,6 +371,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3M6YJP64GV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

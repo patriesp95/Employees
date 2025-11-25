@@ -13,7 +13,7 @@ struct EmployeeDTO: Codable {
     let lastName: String
     let email: String
     let username: String
-    let avatar: String
+    let avatar: String?
     let address: String
     let zipcode: String
     let department: DepartmentDTO
@@ -38,7 +38,7 @@ extension EmployeeDTO {
             lastName: lastName,
             email: email,
             username: username,
-            avatar: URL(string: avatar),
+            avatar: URL(string: avatar ?? ""),
             address: address,
             zipcode: zipcode,
             department: Department(rawValue: department.name) ?? .unknown,

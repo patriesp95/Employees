@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol NetworkRepository: NetworkInteractor {
+protocol NetworkRepository: Sendable, NetworkInteractor {
     func getEmployees() async throws(NetworkError) -> [Employee]
     func getEmployee(id: Int) async throws(NetworkError) -> Employee
 }

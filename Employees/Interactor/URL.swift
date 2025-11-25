@@ -7,11 +7,11 @@
 
 import Foundation
 
-#if DEBUG
-let api = URL(string: "https://localhost:8080/api")!
-#else
+//#if DEBUG
+//let api = URL(string: "https://localhost:8080/api")!
+//#else
 let api = URL(string: "https://acacademy-employees-api.herokuapp.com/api")!
-#endif
+//#endif
 
 extension URL {
     static let getEmployees = api.appending(path: "getEmpleados")
