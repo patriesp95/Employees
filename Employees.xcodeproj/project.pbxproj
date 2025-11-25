@@ -19,6 +19,9 @@
 		B31F32D22ED37FCA0001C780 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F32D12ED37FC20001C780 /* URLSession.swift */; };
 		B31F32D42ED3800A0001C780 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F32D32ED380060001C780 /* URLRequest.swift */; };
 		B31F32D72ED4B8330001C780 /* EmployeesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F32D62ED4B82F0001C780 /* EmployeesVM.swift */; };
+		B3C9D10A2ED5CFE100641736 /* EmployeesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9D1092ED5CFE100641736 /* EmployeesList.swift */; };
+		B3C9D10D2ED5D19500641736 /* ListEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9D10C2ED5D19500641736 /* ListEmptyView.swift */; };
+		B3C9D1102ED5EB2300641736 /* employeesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = B3C9D10F2ED5EB1600641736 /* employeesTest.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		B31F32D12ED37FC20001C780 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		B31F32D32ED380060001C780 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
 		B31F32D62ED4B82F0001C780 /* EmployeesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesVM.swift; sourceTree = "<group>"; };
+		B3C9D1092ED5CFE100641736 /* EmployeesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesList.swift; sourceTree = "<group>"; };
+		B3C9D10C2ED5D19500641736 /* ListEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEmptyView.swift; sourceTree = "<group>"; };
+		B3C9D10F2ED5EB1600641736 /* employeesTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = employeesTest.json; sourceTree = "<group>"; };
 		B3E14FFE2ED2637F00894EBD /* Employees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Employees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -60,13 +66,16 @@
 		B31F32BE2ED35E4D0001C780 /* Employees */ = {
 			isa = PBXGroup;
 			children = (
-				B31F32BC2ED35E4D0001C780 /* ContentView.swift */,
 				B31F32BB2ED35E4D0001C780 /* Assets.xcassets */,
-				B31F32D52ED4B6620001C780 /* ViewModel */,
-				B31F32CC2ED3799B0001C780 /* Repository */,
+				B3C9D10B2ED5D0AF00641736 /* Components */,
 				B31F32C72ED36A5B0001C780 /* Interactor */,
 				B31F32BA2ED35E4D0001C780 /* Model */,
+				B3C9D10E2ED5EB0300641736 /* Preview */,
+				B31F32CC2ED3799B0001C780 /* Repository */,
 				B31F32C32ED35E5E0001C780 /* System */,
+				B31F32D52ED4B6620001C780 /* ViewModel */,
+				B31F32BC2ED35E4D0001C780 /* ContentView.swift */,
+				B3C9D1092ED5CFE100641736 /* EmployeesList.swift */,
 			);
 			path = Employees;
 			sourceTree = "<group>";
@@ -105,6 +114,22 @@
 				B31F32D62ED4B82F0001C780 /* EmployeesVM.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B3C9D10B2ED5D0AF00641736 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B3C9D10C2ED5D19500641736 /* ListEmptyView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B3C9D10E2ED5EB0300641736 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				B3C9D10F2ED5EB1600641736 /* employeesTest.json */,
+			);
+			path = Preview;
 			sourceTree = "<group>";
 		};
 		B3E14FF52ED2637F00894EBD = {
@@ -185,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B31F32BF2ED35E4D0001C780 /* Assets.xcassets in Resources */,
+				B3C9D1102ED5EB2300641736 /* employeesTest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,8 +224,10 @@
 				B31F32CE2ED379B10001C780 /* NetworkRepository.swift in Sources */,
 				B31F32C92ED36A8B0001C780 /* URL.swift in Sources */,
 				B31F32C02ED35E4D0001C780 /* EmployeeDTO.swift in Sources */,
+				B3C9D10D2ED5D19500641736 /* ListEmptyView.swift in Sources */,
 				B31F32C12ED35E4D0001C780 /* ContentView.swift in Sources */,
 				B31F32CB2ED36D140001C780 /* NetworkError.swift in Sources */,
+				B3C9D10A2ED5CFE100641736 /* EmployeesList.swift in Sources */,
 				B31F32D22ED37FCA0001C780 /* URLSession.swift in Sources */,
 				B31F32C22ED35E4D0001C780 /* EmployeesApp.swift in Sources */,
 				B31F32D72ED4B8330001C780 /* EmployeesVM.swift in Sources */,
@@ -338,6 +366,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = Employees/Preview;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -371,6 +400,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = Employees/Preview;
 				DEVELOPMENT_TEAM = 3M6YJP64GV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

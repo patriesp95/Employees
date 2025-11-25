@@ -11,34 +11,25 @@ struct ContentView: View {
     @State private var vm = EmployeesVM()
     
     var body: some View {
-        NavigationStack {
-            List(vm.employees) { employee in
-                HStack {
-                    VStack(alignment: .leading){
-                        Text(employee.fullName)
-                            .font(.headline)
-                        Text(employee.email)
-                            .font(.footnote)
-                            .foregroundStyle(.secondary)
-                        Text(employee.username)
-                            .font(.caption)
-                    }
-                }
-            }
-            .navigationTitle("Employees")
-            .alert("Employee Error", isPresented: $vm.showError) {} message: {
-                Text(vm.errorMsg)
-            }
-            .overlay {
-                if vm.noData {
-                    ContentUnavailableView("No employee data", systemImage: "person.fill", description: Text("No employees found"))
-                }
+        VStack {
+            switch vm.state {
+                case .loading:
+                    ProgressView()
+                case .loaded:
+                    EmployeesList(vm: vm)
+                case .empty:
+                    ListEmptyView()
             }
         }
-        .task(priority: .high){
+        .alert("Employee Error", isPresented: $vm.showError) {} message: {
+            Text(vm.errorMsg)
+        }
+        .task(priority: .high) {
             await vm.getEmployees()
         }
     }
+    
+    
 }
 
 #Preview {

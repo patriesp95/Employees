@@ -47,3 +47,19 @@ extension Employee {
         "\(lastName), \(firstName)"
     }
 }
+
+extension Employee {
+    static let employeeTest: Employee =
+    Employee(
+        id: 3,
+        firstName: "Patricia",
+        lastName: "Martinez Espert",
+        email: "patri@example.com",
+        username: "patrie",
+        avatar: URL(filePath: "https://randomuser.me/api/portraits/women/2.jpg"),
+        address: "78 Market Road",
+        zipcode: "20001",
+        department: .businessDevelopment,
+        gender: .female
+    )
+}

@@ -9,7 +9,7 @@ import Foundation
 
 protocol NetworkRepository: Sendable, NetworkInteractor {
     func getEmployees() async throws(NetworkError) -> [Employee]
-    func getEmployee(id: Int) async throws(NetworkError) -> Employee
+    func getEmployee(id: Int) async throws(NetworkError) -> Employee?
 }
 
 struct Network: NetworkRepository {
@@ -17,7 +17,27 @@ struct Network: NetworkRepository {
         try await getJSON(.get(url: .getEmployees), type: [EmployeeDTO].self).map(\.toEmployee)
     }
     
-    func getEmployee(id: Int) async throws(NetworkError) -> Employee {
+    func getEmployee(id: Int) async throws(NetworkError) -> Employee? {
         try await getJSON(.get(url: .getEmployee(id: id)), type: EmployeeDTO.self).toEmployee
+    }
+}
+
+struct NetworkTest: NetworkRepository {
+    var employees: [Employee] {
+        let url = Bundle.main.url(forResource: "employeesTest", withExtension: "json")!
+        do {
+            let data = try Data(contentsOf: url)
+            return try JSONDecoder().decode([Employee].self, from: data)
+        } catch {
+            return []
+        }
+    }
+    
+    func getEmployees() async throws(NetworkError) -> [Employee] {
+        employees
+    }
+    
+    func getEmployee(id: Int) async throws(NetworkError) -> Employee? {
+        employees.first(where: { $0.id == id }) ?? .employeeTest
     }
 }
