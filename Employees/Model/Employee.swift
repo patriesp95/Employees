@@ -41,3 +41,9 @@ enum Gender: String, Codable {
     case female = "Female"
     case undertermined = "Undertermined"
 }
+
+extension Employee {
+    var fullName: String {
+        "\(lastName), \(firstName)"
+    }
+}

@@ -13,6 +13,12 @@ final class EmployeesVM {
     
     var employees: [Employee] = []
     
+    var showError  = false
+    var errorMsg = ""
+    
+    var noData = false
+
+    
     init(repository: NetworkRepository = Network()) {
         self.repository = repository
     }
@@ -21,7 +27,12 @@ final class EmployeesVM {
         do {
             self.employees = try await repository.getEmployees()
         } catch {
-            print(error)
+            errorMsg = error.localizedDescription
+            showError.toggle()
+        }
+        
+        if employees.isEmpty {
+            noData = true
         }
     }
 }

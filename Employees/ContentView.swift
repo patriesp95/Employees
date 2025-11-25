@@ -12,17 +12,28 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                if !vm.employees.isEmpty {
-                    List(vm.employees) { employee in
+            List(vm.employees) { employee in
+                HStack {
+                    VStack(alignment: .leading){
+                        Text(employee.fullName)
+                            .font(.headline)
                         Text(employee.email)
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+                        Text(employee.username)
+                            .font(.caption)
                     }
-                } else {
-                    ContentUnavailableView("No employee data", systemImage: "person.fill", description: Text("No employees found"))
                 }
             }
             .navigationTitle("Employees")
-            
+            .alert("Employee Error", isPresented: $vm.showError) {} message: {
+                Text(vm.errorMsg)
+            }
+            .overlay {
+                if vm.noData {
+                    ContentUnavailableView("No employee data", systemImage: "person.fill", description: Text("No employees found"))
+                }
+            }
         }
         .task(priority: .high){
             await vm.getEmployees()
